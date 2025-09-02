@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "tutor-desk-api-collection",
+		"name": "Tutor Desk - Student Management API",
+		"description": "Complete API collection for the Tutor Desk student management system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "tutor-desk"
+	},
+	"item": [
+		{
+			"name": "Student Management",
+			"item": [
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"+1234567890\",\n  \"startDate\": \"2024-01-15\",\n  \"course\": \"Advanced Mathematics\",\n  \"level\": \"Intermediate\",\n  \"monthlyFee\": 150.00,\n  \"paymentDay\": 15,\n  \"notes\": \"Student shows strong analytical skills\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/students",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students"
+							]
+						},
+						"description": "Register a new student with basic information"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students"
+							]
+						},
+						"description": "Retrieve a list of all registered students"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students/{{student_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"{{student_id}}"
+							]
+						},
+						"description": "Retrieve student information by their unique ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe Updated\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"+1234567890\",\n  \"startDate\": \"2024-01-15\",\n  \"course\": \"Advanced Mathematics\",\n  \"level\": \"Advanced\",\n  \"monthlyFee\": 180.00,\n  \"paymentDay\": 15,\n  \"notes\": \"Student shows excellent analytical skills\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/students/{{student_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"{{student_id}}"
+							]
+						},
+						"description": "Update existing student information"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students/{{student_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"{{student_id}}"
+							]
+						},
+						"description": "Remove a student from the system"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Students by Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students/status/ACTIVE",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"status",
+								"ACTIVE"
+							]
+						},
+						"description": "Retrieve students filtered by their current status (ACTIVE, INACTIVE, SUSPENDED, GRADUATED)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Students by Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students/course/Advanced Mathematics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"course",
+								"Advanced Mathematics"
+							]
+						},
+						"description": "Retrieve students enrolled in a specific course"
+					},
+					"response": []
+				}
+			],
+			"description": "Core student management operations"
+		},
+		{
+			"name": "Progress Management",
+			"item": [
+				{
+					"name": "Add Progress Entry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students/{{student_id}}/progress?topic=Calculus&description=Derivatives&grade=85&maxGrade=100&comments=Good work",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"{{student_id}}",
+								"progress"
+							],
+							"query": [
+								{
+									"key": "topic",
+									"value": "Calculus"
+								},
+								{
+									"key": "description",
+									"value": "Derivatives"
+								},
+								{
+									"key": "grade",
+									"value": "85"
+								},
+								{
+									"key": "maxGrade",
+									"value": "100"
+								},
+								{
+									"key": "comments",
+									"value": "Good work"
+								}
+							]
+						},
+						"description": "Add a new progress entry for a student"
+					},
+					"response": []
+				}
+			],
+			"description": "Student progress tracking operations"
+		},
+		{
+			"name": "Payment Management",
+			"item": [
+				{
+					"name": "Add Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students/{{student_id}}/payments?amount=150.00&method=CREDIT_CARD&month=January&year=2024&notes=Monthly payment",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"{{student_id}}",
+								"payments"
+							],
+							"query": [
+								{
+									"key": "amount",
+									"value": "150.00"
+								},
+								{
+									"key": "method",
+									"value": "CREDIT_CARD"
+								},
+								{
+									"key": "month",
+									"value": "January"
+								},
+								{
+									"key": "year",
+									"value": "2024"
+								},
+								{
+									"key": "notes",
+									"value": "Monthly payment"
+								}
+							]
+						},
+						"description": "Record a new payment for a student"
+					},
+					"response": []
+				}
+			],
+			"description": "Payment tracking operations"
+		},
+		{
+			"name": "Subscription Management",
+			"item": [
+				{
+					"name": "Get Students with Expiring Subscription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students/expiring?daysBeforeExpiry=7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"expiring"
+							],
+							"query": [
+								{
+									"key": "daysBeforeExpiry",
+									"value": "7"
+								}
+							]
+						},
+						"description": "Retrieve students whose subscription is expiring soon"
+					},
+					"response": []
+				},
+				{
+					"name": "Extend Subscription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/students/{{student_id}}/subscription?monthsToAdd=3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students",
+								"{{student_id}}",
+								"subscription"
+							],
+							"query": [
+								{
+									"key": "monthsToAdd",
+									"value": "3"
+								}
+							]
+						},
+						"description": "Extend a student's subscription by specified months"
+					},
+					"response": []
+				}
+			],
+			"description": "Subscription management operations"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/api",
+			"type": "string"
+		},
+		{
+			"key": "student_id",
+			"value": "your-student-id-here",
+			"type": "string"
+		}
+	]
+}

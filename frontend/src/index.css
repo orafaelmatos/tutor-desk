@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Student Management System Design System - Dark Professional Theme */
+
+@layer base {
+  :root {
+    /* Dark Professional Base Colors */
+    --background: 234 20% 11%;           /* #1E1E2F - Deep navy background */
+    --foreground: 220 15% 95%;           /* #F0F2F5 - Light text */
+
+    /* Card and Surface Colors */
+    --card: 234 18% 14%;                 /* #252638 - Elevated surfaces */
+    --card-foreground: 220 15% 95%;      /* #F0F2F5 - Card text */
+    
+    /* Interactive Elements */
+    --primary: 174 50% 47%;              /* #1ABC9C - Teal accent */
+    --primary-foreground: 220 15% 95%;   /* #F0F2F5 - Primary text */
+    
+    --secondary: 259 35% 55%;            /* #9B59B6 - Soft purple */
+    --secondary-foreground: 220 15% 95%; /* #F0F2F5 - Secondary text */
+    
+    /* Subtle Elements */
+    --muted: 234 15% 18%;                /* #2D2F42 - Muted backgrounds */
+    --muted-foreground: 220 10% 70%;     /* #A8B2C8 - Muted text */
+    
+    --accent: 174 45% 25%;               /* #1F4E42 - Accent backgrounds */
+    --accent-foreground: 174 50% 75%;    /* #7ED3C1 - Accent text */
+    
+    /* Status Colors */
+    --success: 142 70% 50%;              /* #22C55E - Success green */
+    --success-foreground: 220 15% 95%;   /* #F0F2F5 - Success text */
+    
+    --warning: 38 92% 50%;               /* #F59E0B - Warning orange */
+    --warning-foreground: 234 20% 11%;   /* #1E1E2F - Warning text */
+    
+    --destructive: 0 65% 58%;            /* #EF4444 - Error red */
+    --destructive-foreground: 220 15% 95%; /* #F0F2F5 - Error text */
+    
+    /* Form Elements */
+    --border: 234 15% 22%;               /* #363854 - Borders */
+    --input: 234 15% 18%;                /* #2D2F42 - Input backgrounds */
+    --ring: 174 50% 47%;                 /* #1ABC9C - Focus rings */
+    
+    /* Popover and Overlays */
+    --popover: 234 18% 16%;              /* #292B3E - Popover background */
+    --popover-foreground: 220 15% 95%;   /* #F0F2F5 - Popover text */
+    
+    /* Design System Spacing and Effects */
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(174 55% 42%));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(259 40% 50%));
+    --gradient-surface: linear-gradient(135deg, hsl(var(--card)), hsl(234 20% 16%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(234 20% 8% / 0.3);
+    --shadow-medium: 0 8px 40px -4px hsl(234 20% 8% / 0.4);
+    --shadow-strong: 0 16px 60px -8px hsl(234 20% 8% / 0.5);
+    
+    /* Animations */
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
