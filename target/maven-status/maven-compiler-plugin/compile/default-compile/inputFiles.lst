@@ -1,0 +1,15 @@
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\infrastructure\controller\StudentController.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\TutorDeskApplication.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\infrastructure\repository\StudentRepository.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\dto\ProgressEntryDto.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\service\impl\StudentServiceImpl.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\domain\entity\Payment.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\scheduler\SubscriptionScheduler.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\domain\entity\Student.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\dto\PaymentDto.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\dto\CreateStudentRequest.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\domain\entity\ProgressEntry.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\dto\StudentDto.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\service\NotificationService.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\service\impl\NotificationServiceImpl.java
+C:\Users\rafael.matos\Documents\github\tutor-desk\src\main\java\com\corespace\tutordesk\application\service\StudentService.java
