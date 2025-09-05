@@ -22,7 +22,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 @Tag(name = "Student Management", description = "APIs for managing students")
-@CrossOrigin(origins = "http://localhost:8082")
+@CrossOrigin(origins = "http://localhost:3000")
 public class StudentController {
     
     private final StudentService studentService;
