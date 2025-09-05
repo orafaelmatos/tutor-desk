@@ -1,5 +1,5 @@
 # Use OpenJDK 17 as base image
-FROM eclipse-temurin:17
+FROM openjdk:17-jdk-slim
 
 # Set working directory
 WORKDIR /app
@@ -22,7 +22,7 @@ COPY src src
 RUN ./mvnw clean package -DskipTests
 
 # Create a new stage for runtime
-FROM eclipse-temurin:21
+FROM openjdk:17-jre-slim
 
 # Set working directory
 WORKDIR /app
